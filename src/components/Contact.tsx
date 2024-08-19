@@ -16,6 +16,7 @@ function Contact() {
   });
 
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const [showCaptcha, setShowCaptcha] = useState<boolean>(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,39 +24,44 @@ function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleCaptchaChange = (value: string | null) => {
+  const handleCaptchaChange = async (value: string | null) => {
     setCaptchaValue(value);
+
+    if (value) {
+      if (!captchaValue) {
+        alert("Please complete the CAPTCHA");
+        return;
+      }
+
+      if (formRef.current) {
+        try {
+          await emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            formRef.current,
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+          );
+          toast.success(`Email Successfully Sent! 😁`);
+        } catch (error) {
+          console.error(error);
+          toast.error(`Error Sending Email`);
+        }
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setShowCaptcha(false);
+        setCaptchaValue(null);
+      }
+    }
   };
 
   const handleSumbit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if (!captchaValue) {
-      alert("Please complete the CAPTCHA");
-      return;
-    }
-
-    if (formRef.current) {
-      try {
-        await emailjs.sendForm(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-          formRef.current,
-          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        );
-        toast.success(`Email Successfully Sent! 😁`);
-      } catch (error) {
-        console.error(error);
-        toast.error(`Error Sending Email`);
-      }
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    }
+    setShowCaptcha(true);
   };
 
   return (
@@ -137,10 +143,12 @@ function Contact() {
             ></motion.textarea>
           </div>
 
-          <ReCAPTCHA
-            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-            onChange={handleCaptchaChange}
-          />
+          {showCaptcha && (
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={handleCaptchaChange}
+            />
+          )}
 
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
@@ -156,8 +164,6 @@ function Contact() {
             </button>
           </motion.div>
         </form>
-
-        <h1></h1>
 
         <div className="flex justify-center mt-[10rem] lg:w-1/2">
           <motion.a
