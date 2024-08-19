@@ -49,4 +49,4 @@
 <p>If you have any questions or feedback, feel free to <a href="mailto:amanuelabiy.business@gmail.com">contact me</a></p>
 
 <hr>
-<p>Thank you so much for taking the time to check out my <a href="https://amanuel-portfolio-omega.vercel.app/" target="_blank" rel="noopener noreferrer">Coding Portfolio!</a> Have a nice day!</p>
+<p>Thank you so much for taking the time to check out my <a href="https://amanuel-portfolio-omega.vercel.app/" target="_blank" rel="noopener noreferrer">Coding Portfolio</a>! Have a nice day!</p>
