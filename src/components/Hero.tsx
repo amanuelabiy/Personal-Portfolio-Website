@@ -25,7 +25,7 @@ function Hero({ scrollToContactSection }: HeroProps) {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="text-6xl font-thin tracking-widest lg:mt-16 lg:text-8xl"
             >
               Hi
             </motion.h1>
@@ -45,14 +45,16 @@ function Hero({ scrollToContactSection }: HeroProps) {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent text-center mt-6 lg:text-6xl lg:mt-0"
+              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent text-center mt-6 lg:text-6xl lg:mt-0 leading-none p-2"
             >
               <TypeAnimation
                 sequence={[
                   "Computer Science Student",
                   2000,
-                  "Full Stack Developer",
+                  "Web Developer",
                   2000,
+                  "Software Engineer",
+                  1000,
                 ]}
                 wrapper="span"
                 speed={20}
@@ -65,7 +67,7 @@ function Hero({ scrollToContactSection }: HeroProps) {
               initial="hidden"
               animate="visible"
               onClick={scrollToContactSection}
-              className="bg-purple-600 rounded-lg p-4 mt-9"
+              className="bg-gradient-to-r from-purple-400 to-purple-500 rounded-full p-4 mt-9 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-300 mb-9"
             >
               Contact Me
             </motion.button>

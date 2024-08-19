@@ -17,7 +17,7 @@ const iconVariants = (duration: number): Variants => ({
 
 function Technologies() {
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <div id="skills" className="border-b border-neutral-800 pb-24">
       <Frameworks iconVariants={iconVariants} />
       <Languages iconVariants={iconVariants} />
     </div>

@@ -1,5 +1,4 @@
 import { motion, type Variants } from "framer-motion";
-
 import TypeScriptLogo from "../assets/Languages/Typescript_logo_2020.svg.png";
 import JavaScriptLogo from "../assets/Languages/JavaScript-logo.png";
 import JavaLogo from "../assets/Languages/181_Java_logo_logos-512.webp";
