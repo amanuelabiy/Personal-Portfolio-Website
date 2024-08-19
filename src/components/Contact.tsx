@@ -27,12 +27,7 @@ function Contact() {
   const handleCaptchaChange = async (value: string | null) => {
     setCaptchaValue(value);
 
-    if (value) {
-      if (!captchaValue) {
-        alert("Please complete the CAPTCHA");
-        return;
-      }
-
+    if (captchaValue) {
       if (formRef.current) {
         try {
           await emailjs.sendForm(
