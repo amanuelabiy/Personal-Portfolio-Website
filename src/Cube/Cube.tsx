@@ -23,8 +23,6 @@ function Cube() {
     };
   }, []);
 
-  console.log("Is large screen", isLargeScreen);
-
   return (
     <motion.div
       initial={{ opacity: 0, x: isLargeScreen ? 100 : 0 }}
