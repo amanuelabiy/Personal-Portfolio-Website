@@ -33,10 +33,10 @@ function Hero({ scrollToContactSection }: HeroProps) {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
+              className="lg:pb-16 text-5xl font-thin tracking-tight lg:mt-16 lg:text-8xl"
             >
               I'm{" "}
-              <span className="bg-gradient-to-r from-purple-100 via-slate-500 to-purple-500 bg-clip-text text-8xl tracking-tight text-transparent font-bold">
+              <span className="bg-gradient-to-r from-purple-100 via-slate-500 to-purple-500 bg-clip-text text-5xl tracking-tight text-transparent font-bold lg:text-8xl">
                 A
               </span>
               manuel,
@@ -45,7 +45,7 @@ function Hero({ scrollToContactSection }: HeroProps) {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-6xl tracking-tight text-transparent"
+              className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent text-center mt-6 lg:text-6xl lg:mt-0"
             >
               <TypeAnimation
                 sequence={[
