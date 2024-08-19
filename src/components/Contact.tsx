@@ -4,6 +4,7 @@ import { IoIosMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Contact() {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -14,14 +15,25 @@ function Contact() {
     message: "",
   });
 
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+  };
+
   const handleSumbit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!captchaValue) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
 
     if (formRef.current) {
       try {
@@ -124,6 +136,12 @@ function Contact() {
               className="text-white border border-gray-600 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-gray-500 w-[100%] h-40"
             ></motion.textarea>
           </div>
+
+          <ReCAPTCHA
+            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+            onChange={handleCaptchaChange}
+          />
+
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
