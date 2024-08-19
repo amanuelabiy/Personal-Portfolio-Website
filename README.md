@@ -1,9 +1,7 @@
-# Amanuel Abiy's Coding Portfolio
+<h1>Amanuel Abiy's Coding Portfolio</h1>
 
-Welcome to my coding portfolio. This web application was built using React JS, Tailwind CSS, and Framer Motion for Animations. Check it out [here!](https://amanuel-portfolio-omega.vercel.app/)
+<p>Welcome to my coding portfolio. This web application was built using React JS, Tailwind CSS, and Framer Motion for Animations.</p>
 
-Currently, two official plugins are available:
+<p>Check it out <a href="https://amanuel-portfolio-omega.vercel.app/" target="_blank" rel="noopener noreferrer">here!</a></p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-  "# Personal-Portfolio-Website"
+<img src="https://github.com/amanuelabiy/Personal-Portfolio-Website/blob/main/src/assets/projects/project-2.jpg?raw=true" alt="Portfolio Screenshot" width="600" />
