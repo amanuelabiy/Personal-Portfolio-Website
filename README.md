@@ -6,9 +6,7 @@
 
 <img src="https://github.com/amanuelabiy/Personal-Portfolio-Website/blob/main/src/assets/projects/project-2.jpg?raw=true" alt="Portfolio Screenshot" width="600" />
 
-<br></br>
-
-<h1>Table of Contents</h1>
+<h2>Table of Contents</h2>
 
 <ul>
   <li><a href="#introduction">Introduction</a></li>
@@ -16,10 +14,8 @@
   <li><a href="#technologies-used">Technologies Used</a></li>
   <li><a href="#project-structure">Project Structure</a></li>
   <li><a href="#installation">Installation</a></li>
-  <li><a href="#license">License</a></li>
+  <li><a href="#contact">Contact</a></li>
 </ul>
-
-<br></br>
 
 <h2 id="introduction">Introduction</h2>
 <p>My coding portfolio was built to serve as a showcase of my skills, projects, and expertise in software development. As I continue to grow in my career, I plan to update the portfolio with new skills, projects, and experience.</p>
@@ -49,5 +45,8 @@
   <li>Run the application: <code>npm run dev</code></li>
 </ol>
 
-<h2 id="license">License</h2>
-<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<h2 id="contact">Contact</h2>
+<p>If you have any questions or feedback, feel free to <a href="mailto:amanuelabiy.business@gmail.com">contact me</a></p>
+
+<hr>
+<p>Thank you so much for taking the time to check out my <a href="https://amanuel-portfolio-omega.vercel.app/" target="_blank" rel="noopener noreferrer">Coding Portfolio!</a> Have a nice day!</p>
