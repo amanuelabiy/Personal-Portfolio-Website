@@ -29,14 +29,20 @@
 
 <h2 id="technologies-used">Technologies Used</h2>
 <ul>
-  <li>React JS</li>
-  <li>Tailwind CSS</li>
-  <li>Framer Motion</li>
-  <li>Vercel</li>
+  <li><code>React JS</code>: JavaScript library for building user interfaces, particularly single-page applications where the UI needs to update dynamically</li>
+  <li><code>Tailwind CSS</code>: Utility-first CSS framework that allows developers to build custom designs quickly by using predefined classes directly in their HTML.</li>
+  <li><code>Framer Motion</code>: React library for creating smooth, high-performance animations</li>
+  <li><code>Vercel</code>: Cloud platform that provides an easy and efficient way to deploy, host, and scale web applications.</li>
 </ul>
 
 <h2 id="project-structure">Project Structure</h2>
-<p>Brief description of your project's structure, with directory and file information.</p>
+<p>The project follows a simple but effective structure that is common for React applications.</p>
+<ul>
+    <li><code>src/assets</code>: Contains the project's images. The images are organized into different categories such as projects and programming languages.</li>
+    <li><code>src/components</code>: Contains React components. React components are the building blocks of a React application. They allow you to break down the user interface (UI) into reusable, independent pieces that manage their own state and logic.</li>
+    <li><code>src/Cube</code>: This directory contains the React component for the animated cube along with a dedicated CSS file for its styling. I chose to place the cube in a separate folder to leverage standard CSS for its animation. The complexity of the animation made traditional CSS a more suitable choice, allowing for better code organization and maintainability.</li>
+    <li><code>src/text</code>: Contains the text that I will use throughout the project.</li>
+</ul>
 
 <h2 id="installation">Installation</h2>
 <ol>
